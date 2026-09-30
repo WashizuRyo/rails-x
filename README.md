@@ -7,14 +7,18 @@ Ruby on Rails で作る X クローンの土台です。
 - Ruby 3.4.1
 - Rails 8.1.4
 - Bundler 2.6 以上
+- PostgreSQL 14 以上
 
-この段階ではデータベースは使いません。Active Record、Active Storage、
-Action Text、Action Mailbox は無効化しています。
+データベースには PostgreSQL を使用します。Active Storage、Action Text、
+Action Mailbox はまだ無効化しています。
+
+ユーザー登録、ログイン、ログアウト、パスワード再設定には Devise を使用します。
 
 ## Setup
 
 ```sh
 bundle install
+bin/rails db:prepare
 ```
 
 ## Start
