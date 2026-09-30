@@ -8,6 +8,7 @@ Ruby on Rails で作る X クローンの土台です。
 - Rails 8.1.4
 - Bundler 2.6 以上
 - PostgreSQL 14 以上
+- RSpec 8
 
 データベースには PostgreSQL を使用します。Active Storage、Action Text、
 Action Mailbox はまだ無効化しています。
@@ -33,5 +34,5 @@ bin/rails server
 
 ```sh
 bin/rails zeitwerk:check
-bin/rails test
+bundle exec rspec
 ```
