@@ -1,7 +1,15 @@
 {
   "languages": {
     "Ruby": {
-      "language_servers": ["ruby-lsp", "rubocop", "!solargraph", "..."]
+      "language_servers": [
+        "ruby-lsp",
+        "rubocop",
+        "!solargraph",
+        "!sorbet",
+        "!steep",
+        "!kanayago",
+        "!fuzzy-ruby-server"
+      ]
     },
     "HTML+ERB": {
       "language_servers": ["herb", "ruby-lsp", "..."]
