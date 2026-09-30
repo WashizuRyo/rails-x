@@ -1,0 +1,10 @@
+{
+  "languages": {
+    "Ruby": {
+      "language_servers": ["ruby-lsp", "rubocop", "!solargraph", "..."]
+    },
+    "HTML+ERB": {
+      "language_servers": ["herb", "ruby-lsp", "..."]
+    }
+  }
+}
