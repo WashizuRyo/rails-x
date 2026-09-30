@@ -4,14 +4,15 @@ CI.run do
   step "Setup", "bin/setup --skip-server"
 
   step "Style: Ruby", "bin/rubocop"
+  step "Style: ERB", "bundle exec herb lint"
 
   step "Security: Gem audit", "bin/bundler-audit"
   step "Security: Importmap vulnerability audit", "bin/importmap audit"
   step "Security: Brakeman code analysis", "bin/brakeman --quiet --no-pager --exit-on-warn --exit-on-error"
-  step "Tests: Rails", "bin/rails test"
+  step "Tests: RSpec", "bundle exec rspec"
 
   # Optional: Run system tests
-  # step "Tests: System", "bin/rails test:system"
+  # step "Tests: System", "bundle exec rspec spec/system"
 
   # Optional: set a green GitHub commit status to unblock PR merge.
   # Requires the `gh` CLI and `gh extension install basecamp/gh-signoff`.
