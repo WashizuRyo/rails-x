@@ -12,7 +12,6 @@ require "action_mailer/railtie"
 # require "action_text/engine"
 require "action_view/railtie"
 require "action_cable/engine"
-require "rails/test_unit/railtie"
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -36,7 +35,9 @@ module RailsX
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
 
-    # Don't generate system test files.
-    config.generators.system_tests = nil
+    config.generators do |generators|
+      generators.test_framework :rspec
+      generators.system_tests = nil
+    end
   end
 end
