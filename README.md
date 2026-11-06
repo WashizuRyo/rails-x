@@ -39,3 +39,7 @@ bin/rails zeitwerk:check
 bin/rubocop
 bundle exec rspec
 ```
+
+## Pull Request
+
+PRを作成する際は、[PRテンプレート](.github/pull_request_template.md)に従って、概要・関連Issue・変更内容・テスト・その他の情報を記載してください。
