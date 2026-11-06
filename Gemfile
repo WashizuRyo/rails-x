@@ -47,6 +47,8 @@ group :development, :test do
 
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
+  # Check Ruby code embedded in ERB templates with RuboCop
+  gem "rubocop-erb", "~> 0.8", require: false
 end
 
 group :development do
