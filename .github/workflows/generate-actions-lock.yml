@@ -1,0 +1,24 @@
+name: Generate Actions lockfile
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/**'
+
+permissions:
+  contents: read
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - name: Generate and verify lockfile
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh extension install github/gh-actions-lock
+          gh actions-lock --no-narrow .github/workflows/ci.yml
+          gh actions-lock --verify .github/workflows/ci.yml
+      - name: Print generated lockfile
+        run: cat .github/workflows/actions.lock
