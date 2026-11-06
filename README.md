@@ -32,6 +32,8 @@ bin/rails server
 
 ## Check
 
+RuboCopはRubyファイルとERBテンプレート内のRubyコードを検査します。
+
 ```sh
 bin/rails zeitwerk:check
 bin/rubocop
