@@ -12,7 +12,7 @@
       ]
     },
     "HTML+ERB": {
-      "language_servers": ["herb", "ruby-lsp", "..."]
+      "language_servers": ["ruby-lsp", "..."]
     }
   }
 }

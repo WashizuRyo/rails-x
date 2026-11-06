@@ -6,7 +6,6 @@
 
 ```sh
 bin/rubocop -a
-bundle exec herb lint --fix
 bin/rails zeitwerk:check
 bundle exec rspec
 ```

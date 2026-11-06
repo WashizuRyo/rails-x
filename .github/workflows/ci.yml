@@ -48,9 +48,6 @@ jobs:
       - name: Lint code for consistent style
         run: bin/rubocop -f github
 
-      - name: Lint ERB templates
-        run: npx --yes @herb-tools/linter@0.11.0
-
 
       - name: Run tests
         env:
