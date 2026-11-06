@@ -35,6 +35,5 @@ bin/rails server
 ```sh
 bin/rails zeitwerk:check
 bin/rubocop
-bundle exec herb lint
 bundle exec rspec
 ```
