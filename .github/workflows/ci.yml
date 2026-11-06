@@ -18,6 +18,14 @@ jobs:
         with:
           bundler-cache: true
 
+      - name: Resolve security updates
+        run: |
+          bundle config unset deployment
+          bundle lock --update rails rack crass loofah net-ssh nokogiri rails-html-sanitizer --conservative --patch
+
+      - name: Print updated lockfile
+        run: cat Gemfile.lock
+
       - name: Scan for common Rails security vulnerabilities using static analysis
         run: bin/brakeman --no-pager
       
